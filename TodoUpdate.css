@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.calendar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+}
+
+.zoom {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.zoom-button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.zoom-button:hover {
+  background-color: #0056b3;
+}
+
+.date-picker-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.date-picker {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.btn {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+.task_part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.category h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.category ol {
+  padding-left: 20px;
+}
+
+.category li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.category li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.category li button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.category li button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 90%;
+  }
+
+  .task_part {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .todo input[type="text"],
+  .btn,
+  .todo input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
